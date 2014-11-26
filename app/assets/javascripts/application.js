@@ -14,4 +14,16 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require fullcalendar
+//= require underscore
+//= require backbone
+//= require backbone_rails_sync
+//= require backbone_datalink
+//= require backbone/advent_calendar
 //= require_tree .
+
+$("input.datepicker").each(function(input) {
+  $(this).datepicker({
+    dateFormat: "yy-mm-dd",
+    altField: $(this).next()
+  });
+

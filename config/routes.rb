@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
 
+  resources :people
+
   devise_for :users
   get 'calendar/index'
 
