@@ -1,9 +1,9 @@
 <%= simple_form_for @event, :html => { :class => 'form-horizontal' } do |f| %>
   <%= f.input :name %>
   <%= error_span(@event[:name]) %>
-  <%= f.input :start_at %>
+  <%= f.input :start_at, as: :datepicker %>
   <%= error_span(@event[:start_at]) %>
-  <%= f.input :end_at %><p>Enter Date: <input type="text" id="datepicker-13"></p>
+  <%= f.input :end_at %><p>Enter Date: <input type="text" class="datepicker-13" name="end_at" ></p>
   <%= error_span(@event[:end_at]) %>
   <%= f.input :details %>
   <%= error_span(@event[:details]) %>

@@ -31,6 +31,8 @@ gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap_calendar_rails'
 gem 'fullcalendar-rails'
+gem 'jquery-ui-rails', '~> 4.2.1'
+gem 'simple-form-datepicker'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
