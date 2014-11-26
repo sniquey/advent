@@ -12,3 +12,13 @@ bootstrap_calendar Date.today, options do |date|
   end
 end
 %>
+
+
+<div id="people"></div>
+
+<script type="text/javascript">
+  $(function() {
+    window.router = new AdventCalendar.Routers.PeopleRouter({people: <%= @people.to_json.html_safe -%>});
+    Backbone.history.start();
+  });
+</script>
