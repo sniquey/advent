@@ -1,0 +1,14 @@
+<%= simple_form_for @event, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :name %>
+  <%= error_span(@event[:name]) %>
+  <%= f.input :start_at %>
+  <%= error_span(@event[:start_at]) %>
+  <%= f.input :end_at %><p>Enter Date: <input type="text" id="datepicker-13"></p>
+  <%= error_span(@event[:end_at]) %>
+  <%= f.input :details %>
+  <%= error_span(@event[:details]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                events_path, :class => 'btn btn-default' %>
+<% end %>
