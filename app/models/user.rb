@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	# before_action :authenticate_user!
 	has_many :people
 	has_many :events
   # Include default devise modules. Others available are:

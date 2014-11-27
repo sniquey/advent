@@ -44,6 +44,7 @@
 
 .jumbotron h1, .jumbotron p {
 	text-align: center;
+	color: white;
 }
 
 .btn-center {
@@ -64,4 +65,36 @@
 	background-repeat: no-repeat;
 	background-size: 100%;
 	height: 544px;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.features {
+	background: linear-gradient(top, #51B36E, #72C28A);
+	background: -webkit-linear-gradient(top, #51B36E, #72C28A);
+	height: 415px;
+}
+
+.col-xs-6 {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.hometext {
+	width: 200px;
+	margin: 0 auto;
+	color: white;
+}
+
+.registrationcontainer {
+	background: linear-gradient(top, #c00, #f66);
+	background: -webkit-linear-gradient(top, #c00, #f66);
+	background-size: cover;
+	height: 100vh;
+}
+
+.registrationform {
+	width: 800px;
+	position: relative;
+	margin: 0 auto;
 }
