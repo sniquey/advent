@@ -1,4 +1,4 @@
-class AdventCalendar.Models.People extends Backbone.Model
+class AdventCalendar.Models.Person extends Backbone.Model
   paramRoot: 'person'
 
   defaults:
@@ -6,5 +6,5 @@ class AdventCalendar.Models.People extends Backbone.Model
     present_ideas: null
 
 class AdventCalendar.Collections.PeopleCollection extends Backbone.Collection
-  model: AdventCalendar.Models.People
+  model: AdventCalendar.Models.Person
   url: '/people'

@@ -4,7 +4,7 @@ class AdventCalendar.Views.People.NewView extends Backbone.View
   template: JST["backbone/templates/people/new"]
 
   events:
-    "submit #new-people": "save"
+    "submit #new-person": "save"
 
   constructor: (options) ->
     super(options)
@@ -21,11 +21,11 @@ class AdventCalendar.Views.People.NewView extends Backbone.View
     @model.unset("errors")
 
     @collection.create(@model.toJSON(),
-      success: (people) =>
-        @model = people
+      success: (person) =>
+        @model = person
         window.location.hash = "/#{@model.id}"
 
-      error: (people, jqXHR) =>
+      error: (person, jqXHR) =>
         @model.set({errors: $.parseJSON(jqXHR.responseText)})
     )
 

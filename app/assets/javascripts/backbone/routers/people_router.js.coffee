@@ -4,13 +4,13 @@ class AdventCalendar.Routers.PeopleRouter extends Backbone.Router
     @people.reset options.people
 
   routes:
-    "new"      : "newPeople"
+    "new"      : "newPerson"
     "index"    : "index"
     ":id/edit" : "edit"
     ":id"      : "show"
     ".*"        : "index"
 
-  newPeople: ->
+  newPerson: ->
     @view = new AdventCalendar.Views.People.NewView(collection: @people)
     $("#people").html(@view.render().el)
 
@@ -19,13 +19,13 @@ class AdventCalendar.Routers.PeopleRouter extends Backbone.Router
     $("#people").html(@view.render().el)
 
   show: (id) ->
-    people = @people.get(id)
+    person = @people.get(id)
 
-    @view = new AdventCalendar.Views.People.ShowView(model: people)
+    @view = new AdventCalendar.Views.People.ShowView(model: person)
     $("#people").html(@view.render().el)
 
   edit: (id) ->
-    people = @people.get(id)
+    person = @people.get(id)
 
-    @view = new AdventCalendar.Views.People.EditView(model: people)
+    @view = new AdventCalendar.Views.People.EditView(model: person)
     $("#people").html(@view.render().el)

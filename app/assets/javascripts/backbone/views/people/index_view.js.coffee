@@ -9,8 +9,8 @@ class AdventCalendar.Views.People.IndexView extends Backbone.View
   addAll: () =>
     @options.people.each(@addOne)
 
-  addOne: (people) =>
-    view = new AdventCalendar.Views.People.PeopleView({model : people})
+  addOne: (person) =>
+    view = new AdventCalendar.Views.People.PersonView({model : person})
     @$("tbody").append(view.render().el)
 
   render: =>

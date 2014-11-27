@@ -4,15 +4,15 @@ class AdventCalendar.Views.People.EditView extends Backbone.View
   template : JST["backbone/templates/people/edit"]
 
   events :
-    "submit #edit-people" : "update"
+    "submit #edit-person" : "update"
 
   update : (e) ->
     e.preventDefault()
     e.stopPropagation()
 
     @model.save(null,
-      success : (people) =>
-        @model = people
+      success : (person) =>
+        @model = person
         window.location.hash = "/#{@model.id}"
     )
 

@@ -1,7 +1,7 @@
 AdventCalendar.Views.People ||= {}
 
-class AdventCalendar.Views.People.PeopleView extends Backbone.View
-  template: JST["backbone/templates/people/people"]
+class AdventCalendar.Views.People.PersonView extends Backbone.View
+  template: JST["backbone/templates/people/person"]
 
   events:
     "click .destroy" : "destroy"

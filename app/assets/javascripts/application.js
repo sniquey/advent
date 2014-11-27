@@ -18,6 +18,10 @@
 //= require backbone
 //= require backbone_rails_sync
 //= require backbone_datalink
+//= require underscore
+//= require backbone
+//= require backbone_rails_sync
+//= require backbone_datalink
 //= require backbone/advent_calendar
 //= require_tree .
 

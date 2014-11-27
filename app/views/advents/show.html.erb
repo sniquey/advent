@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @advent.date %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @advent.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @advent.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @advent.picture %>
+</p>
+
+<%= link_to 'Edit', edit_advent_path(@advent) %> |
+<%= link_to 'Back', advents_path %>
